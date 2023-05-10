@@ -32,6 +32,8 @@ const App = () => {
         <Route path="/apartmentnew" element={<ApartmentNew />} />
         <Route path="/apartmentindex" element={<ApartmentIndex apartments={apartments}/>} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/apartmentprotectionindex" element={<ApartmentProtectedIndex apartments={apartments} current_user={currentUser} />} />
+        <Route path="/apartmentshow/:id" element={<ApartmentShow apartments={apartments} />} />
       </Routes>
       <Footer />
 

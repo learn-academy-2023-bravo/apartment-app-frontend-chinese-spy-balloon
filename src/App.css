@@ -63,3 +63,16 @@ footer {
   font-family: "Kenzo";
 }
 
+
+/* Not Found Styling */
+/* not found styling */
+.not_found{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-image: url("./Assets/My-project-1-14.jpg");
+ background-size: cover;
+  display: flex;
+  overflow:hidden;
+}
+

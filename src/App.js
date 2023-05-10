@@ -18,7 +18,7 @@ import MockApartments from "./MockApartments.js"
 
 const App = () => {
 
-  const [currentUser, setCurrentUser] = useState(MockUsers[0])
+  const [currentUser, setCurrentUser] = useState(MockUsers[null])
   const [apartments, setApartments] = useState(MockApartments)
   
   return (

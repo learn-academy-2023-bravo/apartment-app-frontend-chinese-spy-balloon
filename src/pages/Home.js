@@ -13,6 +13,7 @@ const Home = () => {
   };
 
   return (
+    
     <div className="wrap">
       <div className="search">
         <Input

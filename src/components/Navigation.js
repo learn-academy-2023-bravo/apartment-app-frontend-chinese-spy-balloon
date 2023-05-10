@@ -5,9 +5,12 @@ import { Nav, NavItem } from "reactstrap"
 const Navigation = ({ current_user }) => {
   return (
     <>
-      <Nav>
+      <Nav className="nav">
         {current_user && (
           <>
+            <NavItem>
+              <NavLink to="/">Home</NavLink>
+            </NavItem>
             <NavItem>
               <NavLink to="/apartmentprotectedindex">My Listings</NavLink>
             </NavItem>
@@ -18,6 +21,9 @@ const Navigation = ({ current_user }) => {
         )}
         {!current_user && (
           <>
+            <NavItem>
+              <NavLink to="/">Home</NavLink>
+            </NavItem>
             <NavItem>
               <NavLink to="/apartmentindex">View Listings</NavLink>
             </NavItem>

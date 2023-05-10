@@ -6,9 +6,9 @@ const Header = ({current_user}) => {
 
 
     return (
-        <>
+        <header>
         <Navigation current_user={current_user} />
-        </>
+        </header>
     )
 }
 

@@ -15,7 +15,7 @@ const MockApartments = [
    user_id:1
     },
     {
-    id:1,
+    id: 2,
    street: "Crotch Cresent",
    unit: "4",
    city: "Oxford",
@@ -30,7 +30,7 @@ const MockApartments = [
    user_id: 1
     },
    {
-    id:1,
+    id: 3,
    street: "BUTT",
    unit: "8008",
    city: "No Wheres Ville",
@@ -41,25 +41,10 @@ const MockApartments = [
    bathrooms: 3.5,
    pets: "no",
    image: "https://images1.apartments.com/i2/ZIv_1ry1moYgymtO9FL3q552Iwz2awR7j2t2dLTjFIk/117/finish-line-apartments-louisville-ky-building-photo.jpg",
-   description: "Blah blih blah",
+   description: "Blah blih blah"
    user_id: 1
-
     },
-    {
-    id: 2,
-    street: "Rimrock",
-    unit: "122",
-    city: "Boulder",
-    state: "CO",
-    square_footage: 1200,
-    price: "1800",
-    bedrooms: 3,
-    bathrooms: 2.5,
-    pets: "yes",
-    image: "https://images1.apartments.com/i2/ioTJb1UnNirlbmJ6799OCHUvEJl38m39e8nmNidka1k/117/mysa-at-the-crossing-boulder-co-building-photo.jpg",
-    description: "Blah blah blah",
-    user_id: 2
-    }
-    ]
+   ]
 
-    export default MockApartments
+   export default MockApartments
+

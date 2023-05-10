@@ -6,7 +6,7 @@ const ApartmentProtectedIndex = ({ apartments, current_user }) => {
   return (
     <>
       <main>
-        {apartments?.map((apartment, index) => {
+        {apartmentProtectedIndex.map((apartment, index) => {
           return (
             <Card
               className="card"

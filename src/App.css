@@ -2,7 +2,7 @@
 header, nav {
   position: fixed;
   background-color: #14457a;
-  color: #000000;
+  color: #ffffff;
   font-family: "Kenzo";
   font-size: 1.3rem;
   font-weight: 600;
@@ -10,7 +10,7 @@ header, nav {
   justify-content: space-between;
   align-items: center;
   background-color: #14457a;
-  color: rgb(11, 11, 11);
+  color: rgb(255, 255, 255);
   position: fixed;
   height: 50px ;
   top: 0;
@@ -37,18 +37,18 @@ nav {
   display: inline-block;
   animation: bounce 0.5s infinite;
 }
-@keyframes bounce {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
 
+.card {
+  
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+  perspective: 800px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
 
 
 

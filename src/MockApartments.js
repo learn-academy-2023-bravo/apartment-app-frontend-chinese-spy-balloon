@@ -1,5 +1,6 @@
-apartments1 = [
+const MockApartments = [
     {
+    id: 1,
    street: "Rimrock",
    unit: "122",
    city: "Boulder",
@@ -13,6 +14,7 @@ apartments1 = [
    description: "Blah blah blah"
     },
     {
+    id: 2,
    street: "Crotch Cresent",
    unit: "4",
    city: "Oxford",
@@ -26,6 +28,7 @@ apartments1 = [
    description: "Blah bleh blah"
     },
    {
+    id: 3,
    street: "BUTT",
    unit: "8008",
    city: "No Wheres Ville",
@@ -40,19 +43,4 @@ apartments1 = [
     },
    ]
 
-
-   apartments2 = [
-    {
-    street: "Rimrock",
-    unit: "122",
-    city: "Boulder",
-    state: "CO",
-    square_footage: 1200,
-    price: "1800",
-    bedrooms: 3,
-    bathrooms: 2.5,
-    pets: "yes",
-    image: "https://images1.apartments.com/i2/ioTJb1UnNirlbmJ6799OCHUvEJl38m39e8nmNidka1k/117/mysa-at-the-crossing-boulder-co-building-photo.jpg",
-    description: "Blah blah blah"
-    }
-    ]
+   export default MockApartments

@@ -21,6 +21,9 @@ const Header = () => {
             <Link to="/ApartmentIndex" className="nav-link">
                 <h4>View Listings</h4>
             </Link>
+            <Link to="/ApartmentNew" className="nav-link">
+                <h4>Add a Listing</h4>
+            </Link>
             </nav>
         </header>
         </>

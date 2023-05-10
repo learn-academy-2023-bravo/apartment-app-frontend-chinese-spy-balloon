@@ -10,7 +10,6 @@ import ApartmentNew from "./pages/ApartmentNew"
 import ApartmentIndex from "./pages/ApartmentIndex"
 import ApartmentProtectedIndex from "./pages/ApartmentProtectedIndex"
 import ApartmentShow from "./pages/ApartmentShow"
-import { Routes, Route } from "react-router-dom";
 
 
 const App = () => {

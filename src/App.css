@@ -1,3 +1,12 @@
+/* Global Styling */
+body{
+  background-image: url("https://images7.alphacoders.com/365/thumb-1920-365706.jpg");
+  font-family: 'Open Sans', sans-serif;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+}
+
 
 header, nav {
   position: fixed;
@@ -63,9 +72,137 @@ footer {
   font-family: "Kenzo";
 }
 
+/* Home Page Styling */
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+
+.wrap{
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.searchTerm {
+  width: 70%;
+
+  border-right: none;
+  padding: 5px;
+  height: 40px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #555;
+}
+
+.searchButton {
+  width: 30%;
+  height: 40px;
+  border: 1px solid #555;
+  background: #555;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+/* Slider Styling */
+.slider{
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.slider {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.suggestion_card1, .suggestion_card2, .suggestion_card3 {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+@media (min-width: 768px) {
+  .slider {
+    width: 150%;
+  }
+
+  .suggestion_card1, .suggestion_card2, .suggestion_card3 {
+    width: 100%;
+    max-width: none;
+    margin-right: 20px;
+    margin: left 20px;
+  }
+
+  .suggestion_card3 {
+    margin-right: 0;
+  }
+}
+
+
+.card-body {
+  height: 100px;
+  width: 100%;
+  overflow: auto;
+}
+
+.suggestion_card1 {
+  background-color: #f5f5f5;
+}
+
+.suggestion_card2 {
+  background-color: #fafafa;
+}
+
+.suggestion_card3 {
+  background-color: #f5f5f5;
+}
+
+
+
 
 /* Not Found Styling */
-/* not found styling */
 .not_found{
   height: 100%;
   width: 100%;

@@ -41,7 +41,7 @@ const MockApartments = [
    bathrooms: 3.5,
    pets: "no",
    image: "https://images1.apartments.com/i2/ZIv_1ry1moYgymtO9FL3q552Iwz2awR7j2t2dLTjFIk/117/finish-line-apartments-louisville-ky-building-photo.jpg",
-   description: "Blah blih blah"
+   description: "Blah blih blah",
    user_id: 1
     },
    ]

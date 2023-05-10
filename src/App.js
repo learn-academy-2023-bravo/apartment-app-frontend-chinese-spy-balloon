@@ -23,7 +23,7 @@ const App = () => {
   return (
     <>
 
-<Header />
+      <Header current_user={currentUser}/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signin" element={<SignIn />} />
@@ -31,7 +31,7 @@ const App = () => {
         <Route path="/apartmentedit" element={<ApartmentEdit />} />
         <Route path="/apartmentnew" element={<ApartmentNew />} />
         <Route path="/apartmentindex" element={<ApartmentIndex apartments={apartments}/>} />
-        <Route path="/apartmentprotectedindex" element={<ApartmentProtectedIndex />} />
+        <Route path="/apartmentprotectedindex" element={<ApartmentProtectedIndex apartments={apartments} current_user={currentUser} />} />
         <Route path="/apartmentShow" element={<ApartmentShow />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

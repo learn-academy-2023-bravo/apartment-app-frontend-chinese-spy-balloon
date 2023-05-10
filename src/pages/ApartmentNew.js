@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Button, Col, Form, FormGroup, Input, Row } from "reactstrap"
+import { Button, Col, Form, FormGroup, Input, Row, Label } from "reactstrap"
 
 const ApartmentNew = ({ createApartment }) => {
   const navigate = useNavigate();

@@ -6,7 +6,7 @@ const Navigation = ({ current_user }) => {
   return (
     <>
       <Nav>
-        <NavItem>
+        <NavItem className="links">
           <NavLink to="/" className="nav-link">Home</NavLink>
         </NavItem>
         {current_user && (

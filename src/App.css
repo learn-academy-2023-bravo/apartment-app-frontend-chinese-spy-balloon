@@ -256,12 +256,18 @@ footer {
   margin: auto;
 }
 
+
+.form-container-new {
+=======
 /*   sign-in   */
 .sign-in-form{
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  
+}
+
   text-align: center;
 }
 
@@ -271,6 +277,5 @@ footer {
   
   
 }
-
 
 

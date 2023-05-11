@@ -266,7 +266,7 @@ footer {
 
 
 .form-container-new {
-=======
+}
 /*   sign-in   */
 .sign-in-form{
   display: flex;
@@ -276,8 +276,6 @@ footer {
   
 }
 
-  text-align: center;
-}
 
 .form-group-container {
   display:block;

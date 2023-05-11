@@ -6,11 +6,11 @@ const Navigation = ({ current_user }) => {
   return (
     <>
       <Nav className="nav">
+        <NavItem>
+          <NavLink to="/">Home</NavLink>
+        </NavItem>
         {current_user && (
           <>
-            <NavItem>
-              <NavLink to="/">Home</NavLink>
-            </NavItem>
             <NavItem>
               <NavLink to="/apartmentprotectedindex">My Listings</NavLink>
             </NavItem>
@@ -21,9 +21,6 @@ const Navigation = ({ current_user }) => {
         )}
         {!current_user && (
           <>
-            <NavItem>
-              <NavLink to="/">Home</NavLink>
-            </NavItem>
             <NavItem>
               <NavLink to="/apartmentindex">View Listings</NavLink>
             </NavItem>

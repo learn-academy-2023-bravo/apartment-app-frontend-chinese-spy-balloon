@@ -18,7 +18,7 @@ import MockApartments from "./MockApartments.js"
 
 const App = () => {
 
-  const [currentUser, setCurrentUser] = useState(MockUsers[1])
+  const [currentUser, setCurrentUser] = useState(MockUsers[0])
   const [apartments, setApartments] = useState(MockApartments)
   
   return (
@@ -29,12 +29,12 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/apartmentedit" element={<ApartmentEdit />} />
+        <Route path="/apartmentedit/:id" element={<ApartmentEdit apartments={apartments}/>} />
         <Route path="/apartmentnew" element={<ApartmentNew />} />
         <Route path="/apartmentindex" element={<ApartmentIndex apartments={apartments}/>} />
         <Route path="*" element={<NotFound />} />
-        <Route path="/apartmentprotectionindex" element={<ApartmentProtectedIndex apartments={apartments} current_user={currentUser} />} />
-        <Route path="/apartmentshow/:id" element={<ApartmentShow apartments={apartments} />} />
+        <Route path="/apartmentprotectedindex" element={<ApartmentProtectedIndex apartments={apartments} current_user={currentUser} />} />
+        <Route path="/apartmentshow/:id" element={<ApartmentShow apartments={apartments} current_user={currentUser} />} />
       </Routes>
       <Footer />
 

@@ -266,22 +266,16 @@ footer {
 
 
 .form-container-new {
-}
-/*   sign-in   */
-.sign-in-form{
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  
 }
-
-
 .form-group-container {
   display:block;
   flex-direction: column;
-  
-  
+
+
 }
 
 

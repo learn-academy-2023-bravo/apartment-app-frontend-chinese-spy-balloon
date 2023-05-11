@@ -2,9 +2,10 @@ import { useNavigate, useParams } from "react-router-dom"
 import { Button, Col, Form, FormGroup, Input, Row, Label } from "reactstrap"
 import { useState } from "react"
 
-const ApartmentEdit = (apartments, updateApartment) => {
-
+const ApartmentEdit = ( {apartments, updateApartment} ) => {
     const { id } = useParams() 
+    console.log(id)
+    console.log(typeof apartments)
     let currentApartment = apartments?.find((apartment) => apartment.id === +id)
 
     const [editApartment, setEditApartment] = useState({

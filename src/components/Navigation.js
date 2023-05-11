@@ -5,33 +5,30 @@ import { Nav, NavItem } from "reactstrap"
 const Navigation = ({ current_user }) => {
   return (
     <>
-      <Nav className="nav">
+      <Nav>
+        <NavItem>
+          <NavLink to="/" className="nav-link">Home</NavLink>
+        </NavItem>
         {current_user && (
           <>
             <NavItem>
-              <NavLink to="/">Home</NavLink>
+              <NavLink to="/apartmentprotectedindex" className="nav-link">My Listings</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/apartmentprotectedindex">My Listings</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink to="/apartmentnew">Create Listing</NavLink>
+              <NavLink to="/apartmentnew" className="nav-link">Create Listing</NavLink>
             </NavItem>
           </>
         )}
         {!current_user && (
           <>
             <NavItem>
-              <NavLink to="/">Home</NavLink>
+              <NavLink to="/apartmentindex" className="nav-link">View Listings</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/apartmentindex">View Listings</NavLink>
+              <NavLink to="/signin" className="nav-link">Sign In</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/signin">Sign In</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink to="/signup">Sign Up</NavLink>
+              <NavLink to="/signup" className="nav-link">Sign Up</NavLink>
             </NavItem>
           </>
         )}

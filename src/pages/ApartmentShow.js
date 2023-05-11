@@ -1,7 +1,7 @@
 import { useParams, NavLink } from "react-router-dom"
 
 
-const ApartmentShow = ({ apartments }) => {
+const ApartmentShow = ({ apartments, current_user }) => {
 
     const { id } = useParams()
     let selectedApartment = apartments?.find((apartment) => apartment.id === +id)
@@ -25,9 +25,11 @@ const ApartmentShow = ({ apartments }) => {
                 </h5>
                 </>
             )}
+            {current_user && (
                 <NavLink to={`/apartmentedit/${selectedApartment.id}`} className="nav-link">
                     Edit Listing
                 </NavLink>
+            )}
 
         </main>
     )

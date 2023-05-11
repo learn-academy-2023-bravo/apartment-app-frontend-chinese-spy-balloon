@@ -8,9 +8,9 @@ body{
 }
 
 
-header, .nav {
+header, nav {
   position: fixed;
-  background-color: #14457a;
+  background-color: #eaebeb;
   color: #ffffff;
   font-family: "Kenzo";
   font-size: 1.3rem;
@@ -266,7 +266,7 @@ footer {
 
 
 .form-container-new {
-=======
+}
 /*   sign-in   */
 .sign-in-form{
   display: flex;
@@ -276,8 +276,6 @@ footer {
   
 }
 
-  text-align: center;
-}
 
 .form-group-container {
   display:block;

@@ -2,8 +2,8 @@
 const NotFound = () => {
     return (
       <section className="not_found">
-        <h1>404 ERROR;</h1>
-        <h3> Chinese Spy Balloon Has Been Downed</h3>
+        <h1>404 ERROR <br></br>
+        Chinese Spy Balloon Has Been Downed</h1>
       </section>
     );
   };

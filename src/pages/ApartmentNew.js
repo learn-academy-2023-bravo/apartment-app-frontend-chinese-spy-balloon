@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Button, Col, Form, FormGroup, Input, Row, Label } from "reactstrap"
+import { Button, Col, Container, Form, FormGroup, Input, Row, Label } from "reactstrap"
 
 const ApartmentNew = ({ createApartment }) => {
   const navigate = useNavigate();
@@ -27,15 +27,16 @@ const ApartmentNew = ({ createApartment }) => {
 
   return (
     <>
+    <Container className='form-container-new'>
       <Form>
         <Row>
           <Col md={6}>
             <FormGroup>
-              <Label for="apartment-street">Street</Label>
+              <Label for="apartment-street"></Label>
               <Input
                 id="apartment-street"
                 name="street"
-                placeholder="Enter Street Name"
+                placeholder="enter street name"
                 type="text"
                 onChange={handleChange}
                 value={newApartment.street}
@@ -44,11 +45,11 @@ const ApartmentNew = ({ createApartment }) => {
           </Col>
           <Col md={6}>
             <FormGroup>
-              <Label for="apartment-unit">Unit</Label>
+              <Label for="apartment-unit"></Label>
               <Input
                 id="apartment-unit"
                 name="unit"
-                placeholder="Enter Unit Number"
+                placeholder="enter unit number"
                 type="text"
                 onChange={handleChange}
                 value={newApartment.unit}
@@ -57,7 +58,7 @@ const ApartmentNew = ({ createApartment }) => {
           </Col>
         </Row>
         <FormGroup>
-          <Label for="apartment-city">City</Label>
+          <Label for="apartment-city"></Label>
           <Input
             id="apartment-city"
             name="city"
@@ -68,7 +69,7 @@ const ApartmentNew = ({ createApartment }) => {
           />
         </FormGroup>
         <FormGroup>
-          <Label for="apartment-state">State</Label>
+          <Label for="apartment-state"></Label>
           <Input
             id="apartment-state"
             name="state"
@@ -81,7 +82,7 @@ const ApartmentNew = ({ createApartment }) => {
         <Row>
           <Col md={6}>
             <FormGroup>
-              <Label for="apartment-square_footage">Square Footage</Label>
+              <Label for="apartment-square_footage"></Label>
               <Input
                 id="apartment-square_footage"
                 name="square footage"
@@ -95,7 +96,7 @@ const ApartmentNew = ({ createApartment }) => {
 
           <Col md={2}>
             <FormGroup>
-              <Label for="apartment-price">Price</Label>
+              <Label for="apartment-price"></Label>
               <Input
                 id="apartment-price"
                 name="price"
@@ -109,7 +110,7 @@ const ApartmentNew = ({ createApartment }) => {
 
           <Col md={2}>
             <FormGroup>
-              <Label for="apartment-bedrooms">Bedroom</Label>
+              <Label for="apartment-bedrooms"></Label>
               <Input
                 id="apartment-bedrooms"
                 name="bedrooms"
@@ -123,7 +124,7 @@ const ApartmentNew = ({ createApartment }) => {
 
           <Col md={2}>
             <FormGroup>
-              <Label for="apartment-bathrooms">Bathrooms</Label>
+              <Label for="apartment-bathrooms"></Label>
               <Input
                 id="apartment-bathrooms"
                 name="bathrooms"
@@ -137,7 +138,7 @@ const ApartmentNew = ({ createApartment }) => {
 
           <Col md={2}>
             <FormGroup>
-              <Label for="apartment-pets">Pets</Label>
+              <Label for="apartment-pets"></Label>
               <Input
                 id="apartment-pets"
                 name="pets"
@@ -150,11 +151,11 @@ const ApartmentNew = ({ createApartment }) => {
           </Col>
           <Col md={4}>
             <FormGroup>
-              <Label for="apartment-image">Image</Label>
+              <Label for="apartment-image"></Label>
               <Input
                 id="apartment-image"
                 name="image"
-                placeholder="Enter Image URL"
+                placeholder="enter image URL"
                 type="text"
                 onChange={handleChange}
                 value={newApartment.image}
@@ -163,11 +164,11 @@ const ApartmentNew = ({ createApartment }) => {
           </Col>
           <Col md={4}>
             <FormGroup>
-              <Label for="apartment-description">Description</Label>
+              <Label for="apartment-description"></Label>
               <Input
                 id="apartment-description"
                 name="description"
-                placeholder="Enter description URL"
+                placeholder="enter description"
                 type="text"
                 onChange={handleChange}
                 value={newApartment.description}
@@ -178,6 +179,7 @@ const ApartmentNew = ({ createApartment }) => {
 
         <Button onClick={handleClick}>Submit</Button>
       </Form>
+      </Container>
     </>
   );
 };

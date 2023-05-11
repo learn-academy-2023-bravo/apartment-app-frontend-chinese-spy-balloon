@@ -29,7 +29,7 @@ const Home = () => {
           <Card className="suggestion_card1">
             <img
               alt="Sample"
-              src="https://picsum.photos/300/200"
+              src="https://img.money.com/2021/01/Beware-Rental-Scams-1.jpg?quality=60&w=800"
             />
             <CardBody>
               <CardTitle tag="h5">
@@ -55,7 +55,7 @@ const Home = () => {
           <Card className="suggestion_card2">
             <img
               alt="Sample"
-              src="https://picsum.photos/300/200"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfurKO-LNP42dO5x3MJPBpCZ5fuax0TfGTQQ&usqp=CAU"
             />
             <CardBody>
               <CardTitle tag="h5">

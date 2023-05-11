@@ -34,7 +34,7 @@ const Home = () => {
             />
             <CardBody>
               <CardTitle tag="h5">
-              $1,999,999 3 bds| 2.5 ba| 1,200 sqft| - Apartment for sale
+              Card Title 1
               </CardTitle>
               <CardSubtitle
                 className="mb-2 text-muted"

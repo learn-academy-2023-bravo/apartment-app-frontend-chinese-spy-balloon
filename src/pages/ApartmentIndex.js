@@ -5,29 +5,26 @@ import "../App.css"
 const ApartmentIndex = ({ apartments }) => {
   return (
     <main>
-      {apartments?.map((apartment, index) => {
-        return (
-          <Card
-            className="card"
-            style={{
-              width: "18rem",
-            }}
-          >
-            <img alt="Sample" src={apartment.image} />
-            <CardBody>
-              <CardTitle tag="h5">{apartment.street}</CardTitle>
-              <CardSubtitle>
-                {apartment.city}, {apartment.state}
-              </CardSubtitle>
-              <CardSubtitle>Price: ${apartment.price}</CardSubtitle>
+      <div className="card-container"> {/* Use card-container class instead of container */}
+        {apartments?.map((apartment, index) => {
+          return (
+            <Card className="card">
+              <img alt="Sample" src={apartment.image} />
+              <CardBody>
+                <CardTitle tag="h5">{apartment.street}</CardTitle>
+                <CardSubtitle>
+                  {apartment.city}, {apartment.state}
+                </CardSubtitle>
+                <CardSubtitle>Price: ${apartment.price}</CardSubtitle>
 
-              <NavLink to={`/apartmentshow/${apartment.id}`}>
-                Show listing
-              </NavLink>
-            </CardBody>
-          </Card>
-        )
-      })}
+                <NavLink to={`/apartmentshow/${apartment.id}`}>
+                  Show listing
+                </NavLink>
+              </CardBody>
+            </Card>
+          )
+        })}
+      </div>
     </main>
   )
 }

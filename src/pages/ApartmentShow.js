@@ -25,11 +25,10 @@ const ApartmentShow = ({ apartments }) => {
                 </h5>
                 </>
             )}
-            <div>
                 <NavLink to={`/apartmentedit/${selectedApartment.id}`} className="nav-link">
                     Edit Listing
                 </NavLink>
-            </div>
+
         </main>
     )
 }

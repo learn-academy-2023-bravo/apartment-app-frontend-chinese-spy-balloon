@@ -14,22 +14,19 @@ import ApartmentShow from "./pages/ApartmentShow"
 import MockUsers from "./MockUsers.js"
 import MockApartments from "./MockApartments.js"
 
-
-
 const App = () => {
+  const url = "http://localhost:3000";
+  
+  const [currentUser, setCurrentUser] = useState(null);
 
-
-  const [currentUser, setCurrentUser] = useState(MockUsers[null])
-
-  const [apartments, setApartments] = useState([])
-
+  const [apartments, setApartments] = useState([]);
 
   useEffect(() => {
     readApartment()
   }, [])
 
   const readApartment = () => {
-    fetch('http://localhost:3000/apartments')
+    fetch(`${url}/apartments`)
     .then(response => response.json())
     .then(payload => {
       setApartments(payload)
@@ -38,7 +35,7 @@ const App = () => {
   }
 
   const createApartment = (createdApartment) => {
-    fetch('http://localhost:3000/apartments', {
+    fetch(`${url}/apartments`, {
       body: JSON.stringify(createdApartment),
       headers: {
         "Content-Type": "application/json"
@@ -51,7 +48,7 @@ const App = () => {
   }
  
   const updateApartment = (selectedApartment, id) => {
-    fetch(`http://localhost:3000/apartments/${id}`, {
+    fetch(`${url}/apartments/${id}`, {
       body: JSON.stringify(selectedApartment),
       headers: {
         "Content-Type": "application/json"
@@ -63,14 +60,45 @@ const App = () => {
     .catch(error => console.log("Updated apartment errors: ", error))
   }
 
+  // authentication methods
+  const login = (userInfo) => {
+    fetch(`${url}/login`, {
+      body: JSON.stringify(userInfo),
+      headers: {
+        "Content-Type": 'application/json',
+        "Accept": 'application/json'
+      },
+      method: 'POST'
+    })
+    .then(response => {
+      // store the token
+      localStorage.setItem("token", response.headers.get("Authorization"))
+      return response.json()
+    })
+    .then(payload => {
+      setCurrentUser(payload)
+    })
+    .catch(error => console.log("login errors: ", error))
+  }
 
-  const signin = (email) => {
-    const user = MockUsers.find(user => user.email === email)
-    if (!user){
-      return console.error('Please enter a correct email')
-    }
-    setCurrentUser(user)
+  const signup = (userInfo) => {
+    fetch(`${url}/signup`, {
+      body: JSON.stringify(userInfo),
+      headers: {
+        "Content-Type": 'application/json',
+        "Accept": 'application/json'
+      },
+      method: 'POST'
+    })
+    .then(response => {
 
+      localStorage.setItem("token", response.headers.get("Authorization"))
+      return response.json()
+    })
+    .then(payload => {
+      setCurrentUser(payload)
+    })
+    .catch(error => console.log("signup errors: ", error))
   }
   
   return (
@@ -79,7 +107,7 @@ const App = () => {
       <Header current_user={currentUser}/>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/signin" element={<SignIn signin={signin} currentUser={currentUser}/>} />
+        <Route path="/signin" element={<SignIn login={login} />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/apartmentedit/:id" element={<ApartmentEdit apartments={apartments} updateApartment={updateApartment}/>} />
         <Route path="/apartmentnew" element={<ApartmentNew  createApartment={createApartment}/>} />

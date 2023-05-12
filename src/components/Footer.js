@@ -1,13 +1,11 @@
-import '../App.css'
+import "../App.css"
 
 const Footer = () => {
-
-
-    return (
-        <>
-            <footer>Created by team Chinese Spy Balloon | 2023</footer>
-        </>
-    )
+  return (
+    <>
+      <footer>Created by team Chinese Spy Balloon | 2023</footer>
+    </>
+  )
 }
 
 export default Footer

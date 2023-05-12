@@ -2,17 +2,16 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { Button, Col, Form, FormGroup, Input, Row, Label } from "reactstrap"
 
-const SignIn = ( { signin, currentUser } ) => {
-const navigate = useNavigate()
-const [email, setEmail] = useState('')
+const SignIn = ({ signin, currentUser }) => {
+  const navigate = useNavigate()
+  const [email, setEmail] = useState("")
 
-// const handleChange = (e) => {
+  // const handleChange = (e) => {
 
-
-const handleSubmit = (e) => {
-   e.preventDefault()
-   signin(email)
-   currentUser ? navigate("/apartmentprotectedindex") : navigate("/signin")
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    signin(email)
+    currentUser ? navigate("/apartmentprotectedindex") : navigate("/signin")
   }
   return (
     <>

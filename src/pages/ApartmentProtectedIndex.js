@@ -2,9 +2,9 @@ import { Card, CardBody, CardTitle, CardSubtitle, Button } from "reactstrap"
 import { NavLink } from "react-router-dom"
 
 const ApartmentProtectedIndex = ({ apartments, current_user }) => {
-
-
-    const apartmentProtectedIndex = apartments?.filter(apartment => current_user?.id === apartment.user_id)
+  const apartmentProtectedIndex = apartments?.filter(
+    (apartment) => current_user?.id === apartment.user_id
+  )
   return (
     <>
       <main>
@@ -27,7 +27,6 @@ const ApartmentProtectedIndex = ({ apartments, current_user }) => {
                 <NavLink to={`/apartmentshow/${apartment.id}`}>
                   Show listing
                 </NavLink>
-
               </CardBody>
             </Card>
           )

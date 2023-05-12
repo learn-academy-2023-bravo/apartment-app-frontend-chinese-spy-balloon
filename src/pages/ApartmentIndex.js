@@ -5,7 +5,9 @@ import "../App.css"
 const ApartmentIndex = ({ apartments }) => {
   return (
     <main>
-      <div className="card-container"> {/* Use card-container class instead of container */}
+      <div className="card-container">
+        {" "}
+        {/* Use card-container class instead of container */}
         {apartments?.map((apartment, index) => {
           return (
             <Card className="card">

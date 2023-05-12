@@ -6,29 +6,44 @@ const Navigation = ({ current_user }) => {
   return (
     <>
       <Nav>
+        <div className="logo-image">
+          <img src="image" class="img-fluid" />
+        </div>
         <NavItem className="links">
-          <NavLink to="/" className="nav-link">Home</NavLink>
+          <NavLink to="/" className="nav-link">
+            Home
+          </NavLink>
         </NavItem>
         {current_user && (
           <>
             <NavItem>
-              <NavLink to="/apartmentprotectedindex" className="nav-link">My Listings</NavLink>
+              <NavLink to="/apartmentprotectedindex" className="nav-link">
+                My Listings
+              </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/apartmentnew" className="nav-link">Create Listing</NavLink>
+              <NavLink to="/apartmentnew" className="nav-link">
+                Create Listing
+              </NavLink>
             </NavItem>
           </>
         )}
         {!current_user && (
           <>
             <NavItem>
-              <NavLink to="/apartmentindex" className="nav-link">View Listings</NavLink>
+              <NavLink to="/apartmentindex" className="nav-link">
+                View Listings
+              </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/signin" className="nav-link">Sign In</NavLink>
+              <NavLink to="/signin" className="nav-link">
+                Sign In
+              </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/signup" className="nav-link">Sign Up</NavLink>
+              <NavLink to="/signup" className="nav-link">
+                Sign Up
+              </NavLink>
             </NavItem>
           </>
         )}

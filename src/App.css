@@ -48,6 +48,11 @@ nav {
 
 }
 
+.logo-image{
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: -6px;
+}
 /* Index Page Styling */
 .card {
   display: flex;
@@ -92,7 +97,27 @@ nav {
   transition: transform 0.3s ease;
 }
 
+/* Show Page Styling */
 
+.apartment_description {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0 auto;
+  height: 100vh;
+}
+
+.apartment-image {
+  box-shadow: 0px 20px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px
+}
+.show_text {
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  box-shadow: 0px 20px 10px rgba(0, 0, 0, 0.5);
+}
 
 
 

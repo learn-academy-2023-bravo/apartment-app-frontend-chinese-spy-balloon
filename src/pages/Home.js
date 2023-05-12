@@ -1,22 +1,26 @@
-import { Input, CardBody, Card, CardTitle, CardSubtitle, CardText, Button } from "reactstrap";
-import Slider from "react-slick";
-import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import {
+  Input,
+  CardBody,
+  Card,
+  CardTitle,
+  CardSubtitle,
+  CardText,
+  Button,
+} from "reactstrap"
+import Slider from "react-slick"
+import { BsChevronLeft, BsChevronRight } from "react-icons/bs"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 
 const Home = () => {
   function PrevArrow(props) {
-    const { className, onClick } = props;
-    return (
-      <BsChevronLeft className={className} onClick={onClick} />
-    );
+    const { className, onClick } = props
+    return <BsChevronLeft className={className} onClick={onClick} />
   }
 
   function NextArrow(props) {
-    const { className, onClick } = props;
-    return (
-      <BsChevronRight className={className} onClick={onClick} />
-    );
+    const { className, onClick } = props
+    return <BsChevronRight className={className} onClick={onClick} />
   }
 
   const settings = {
@@ -27,8 +31,8 @@ const Home = () => {
     slidesToScroll: 3,
     prevArrow: <PrevArrow />,
     nextArrow: <NextArrow />,
-  };
-  
+  }
+
   return (
     <div className="wrap">
       <div className="search">
@@ -97,5 +101,4 @@ const Home = () => {
     </div>
   )
 }
-  export default Home
-  
+export default Home

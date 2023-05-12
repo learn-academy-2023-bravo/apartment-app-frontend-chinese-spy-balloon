@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom"
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Footer from "./components/Footer"
 import Header from "./components/Header"
 import Home from "./pages/Home"
@@ -21,8 +21,49 @@ const App = () => {
 
   const [currentUser, setCurrentUser] = useState(MockUsers[null])
 
-  const [apartments, setApartments] = useState(MockApartments)
+  const [apartments, setApartments] = useState([])
+
+
+  useEffect(() => {
+    readApartment()
+  }, [])
+
+  const readApartment = () => {
+    fetch('http://localhost:3000/apartments')
+    .then(response => response.json())
+    .then(payload => {
+      setApartments(payload)
+    })
+    .catch(error => console.log("apartment read errors", error))
+  }
+
+  const createApartment = (createdApartment) => {
+    fetch('http://localhost:3000/apartments', {
+      body: JSON.stringify(createdApartment),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "POST"
+    })
+    .then(response => response.json())
+    .then(() => readApartment())
+    .catch(error => console.log("Create apartment errors: ", error))
+  }
  
+  const updateApartment = (selectedApartment, id) => {
+    fetch(`http://localhost:3000/apartments/${id}`, {
+      body: JSON.stringify(selectedApartment),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "PATCH"
+    })
+    .then(response => response.json())
+    .then(() => readApartment())
+    .catch(error => console.log("Updated apartment errors: ", error))
+  }
+
+
   const signin = (email) => {
     const user = MockUsers.find(user => user.email === email)
     if (!user){
@@ -40,8 +81,8 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/signin" element={<SignIn signin={signin} currentUser={currentUser}/>} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/apartmentedit/:id" element={<ApartmentEdit apartments={apartments}/>} />
-        <Route path="/apartmentnew" element={<ApartmentNew />} />
+        <Route path="/apartmentedit/:id" element={<ApartmentEdit apartments={apartments} updateApartment={updateApartment}/>} />
+        <Route path="/apartmentnew" element={<ApartmentNew  createApartment={createApartment}/>} />
         <Route path="/apartmentindex" element={<ApartmentIndex apartments={apartments}/>} />
         <Route path="*" element={<NotFound />} />
         <Route path="/apartmentprotectedindex" element={<ApartmentProtectedIndex apartments={apartments} current_user={currentUser} />} />

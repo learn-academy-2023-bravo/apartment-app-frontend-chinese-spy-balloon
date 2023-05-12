@@ -34,7 +34,7 @@ const App = () => {
   
   return (
     <>
-
+      <div className="logo" />
       <Header current_user={currentUser}/>
       <Routes>
         <Route path="/" element={<Home />} />

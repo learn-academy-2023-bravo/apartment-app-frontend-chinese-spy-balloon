@@ -113,6 +113,8 @@ footer {
   width: 100%;
   position: relative;
   display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .searchTerm {
@@ -143,23 +145,19 @@ footer {
 }
 
 
-.wrap{
+.wrap {
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   width: 30%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
-.search {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
 
 .searchTerm {
   width: 70%;
-
   border-right: none;
   padding: 5px;
   height: 40px;
@@ -180,41 +178,39 @@ footer {
   font-size: 20px;
 }
 /* Slider Styling */
-.slider{
-  width: 100%;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
+.slick-slider.slick-initialized {
+ width: 100%;
+ margin: 0;
 }
-.slider {
-  width: 80%;
-  margin: 0 auto;
+.wrap .slick-track {
+  position: relative;
+  display: grid;
+  gap: 15px;
+  margin-right: auto;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
-.suggestion_card1, .suggestion_card2, .suggestion_card3 {
-  width: 100%;
-  margin: 0 auto;
-  max-width: 400px;
+.wrap .slick-track::before,
+.wrap .slick-track::after{
+  content: none;
+}
+
+
+.suggestion_card1,
+.suggestion_card2,
+.suggestion_card3 {
+  margin: 0 5px;
+  max-width: 350px;
 }
 
 @media (min-width: 768px) {
-  .slider {
-    width: 150%;
-  }
-
-  .suggestion_card1, .suggestion_card2, .suggestion_card3 {
+  .suggestion_card1,
+  .suggestion_card2,
+  .suggestion_card3 {
     width: 100%;
     max-width: none;
-    margin-right: 20px;
-    margin: left 20px;
-  }
-
-  .suggestion_card3 {
-    margin-right: 0;
   }
 }
-
 
 .card-body {
   height: 100px;
@@ -234,12 +230,22 @@ footer {
   background-color: #f5f5f5;
 }
 
+
+
 /* Sign Up Styling */
 .sign_up{
   position: relative;
   justify-content: center;
   top: 100px;
   /* left: 25%; */
+}
+
+.card-container{
+  display: grid;
+  position: relative;
+  gap: 15px;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-right: 0 auto;
 }
 
 
